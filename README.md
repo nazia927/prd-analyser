@@ -62,3 +62,17 @@ The tool uses rule-based text analysis:
 ---
 
 ## 📊 Scoring Logic
+
+The PRD Quality Score is calculated using a weighted penalty system based on detected issues.
+
+Score = 100 - (15 × High Severity Issues + 8 × Medium Severity Issues + 3 × Low Severity Issues)
+
+Where:
+- High severity issues represent missing critical requirements such as acceptance criteria, edge cases, dependencies, security, or KPIs.
+- Medium severity issues represent ambiguous or unclear requirements (e.g., vague terms like "fast", "easy").
+- Low severity issues represent minor improvements or refinements.
+
+The final score is bounded between 0 and 100.
+
+Higher score → Better structured and more complete PRD  
+Lower score → More gaps, ambiguity, and missing requirements
